@@ -9,4 +9,4 @@ To create a SigMF archive, please follow the instructions below.
 
 To process a SigMF archive,
 
-3. Please first ensure that an archive called "Compressed SigMF files" lies in the current directory, then run the script named "process_archive.py". This script decompressed the archive to a new folder called "Decompressed SigMF files", loops through all the SigMF recordings in it and displays the data and meta data associated with each of them.
+3. Please first ensure that an archive called "Compressed SigMF files" lies in the current directory, then run the script named "process_archive.py". This script decompresses the archive to a new folder called "Decompressed SigMF files", loops through all the SigMF recordings in it and displays the data and meta data associated with each of them.
