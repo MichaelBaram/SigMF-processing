@@ -49,7 +49,7 @@ def create_sigmf_archive(directory, archive_name):
 
 
 # Example usage:
-directory_path = "SigMF files";#input("Enter the directory path: ")
+directory_path = "SigMF and csv files";#input("Enter the directory path: ")
 archive_name = "Compressed SigMF files"
 create_sigmf_archive(directory_path, f"{archive_name}.zip")
 
