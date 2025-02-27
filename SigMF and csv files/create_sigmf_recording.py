@@ -19,7 +19,7 @@ import pytz
 #"cf32_le" specifies "complex 32-bit floating-point samples stored in littleendian"
 def csv_to_complex_array(csv_file, num_samples):
     """
-    Reads columns 4 and 5 from a CSV file and converts them into a complex NumPy array.
+    Reads columns 2 and 3 from a CSV file and converts them into a complex NumPy array.
     
     Parameters:
         csv_file (str): Path to the input CSV file.
@@ -43,8 +43,8 @@ def csv_to_complex_array(csv_file, num_samples):
                 break
                 
             # Extract real (column 4) and imaginary (column 5) parts
-            real_parts.append(float(row[3]))  # Column 4 (0-indexed)
-            imag_parts.append(float(row[4]))  # Column 5 (0-indexed)
+            real_parts.append(float(row[1]))  # Column 2 (0-indexed)
+            imag_parts.append(float(row[2]))  # Column 3 (0-indexed)
             
             count += 1
     
