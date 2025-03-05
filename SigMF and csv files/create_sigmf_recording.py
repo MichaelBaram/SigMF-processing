@@ -17,13 +17,12 @@ import pytz
 #Archive .
 
 #"cf32_le" specifies "complex 32-bit floating-point samples stored in littleendian"
-def csv_to_complex_array(csv_file, num_samples):
+def csv_to_complex_array(csv_file):
     """
     Reads columns 2 and 3 from a CSV file and converts them into a complex NumPy array.
     
     Parameters:
         csv_file (str): Path to the input CSV file.
-        num_samples (int): Number of samples to process.
     
     Returns:
         np.ndarray: Complex NumPy array of type np.complex64.
@@ -39,9 +38,11 @@ def csv_to_complex_array(csv_file, num_samples):
         
         for row in reader:
             # Stop once we have processed the required number of samples
-            if count >= num_samples:
-                break
+            #if count >= num_samples:
+            #    break
                 
+            #print("real part:",float(row[1]))
+            #print("Imag part:",float(row[2]))
             # Extract real (column 4) and imaginary (column 5) parts
             real_parts.append(float(row[1]))  # Column 2 (0-indexed)
             imag_parts.append(float(row[2]))  # Column 3 (0-indexed)
@@ -71,7 +72,7 @@ def main():
     gps_alt = float(input("Enter the GPS altitude (in meters): "))
     
     # Convert CSV to complex array
-    complex_array = csv_to_complex_array(csv_file, 3)
+    complex_array = csv_to_complex_array(csv_file)
     print("Complex Array:")
     print(complex_array)
     
