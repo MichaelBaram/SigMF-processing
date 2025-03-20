@@ -1,0 +1,21 @@
+{
+    "global": {
+        "core:author": "mbaram@nd.edu",
+        "core:datatype": "cf32_le",
+        "core:datetime": "2025-03-05 16:50:27.349406-05:00",
+        "core:description": "Synchronous complex baseband waveforms for SASL algorithm",
+        "core:frequency": 5787500000,
+        "core:sample_rate": 100000,
+        "core:sha512": "c56f4f9012ee3d906c6038895a632675be550f560ad63d271922e1e416c7598300e2a66daf398d4f090e630a6c9c424f5244bebaf39178339dd184822772d10d",
+        "core:version": "1.0"
+    },
+    "captures": [
+        {
+            "core:sample_start": 0,
+            "gps:altitude": 0.0,
+            "gps:latitude": 41.6971068,
+            "gps:longitude": -86.237659
+        }
+    ],
+    "annotations": []
+}
