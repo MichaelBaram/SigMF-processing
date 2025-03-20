@@ -3,6 +3,7 @@ from sigmf import SigMFFile, sigmffile
 import zipfile
 import os
 import sys
+import shutil
 def unzip_archive(archive_name, output_directory):
     """
     Extracts all files from a ZIP archive to the specified directory.
@@ -95,11 +96,15 @@ def read_SigMF_recording(name_of_recording):
             print(d, file=file_to_write_in)
 
 # Example usage:
-archive_name = "Compressed SigMF files.zip" #input("Enter the path to the ZIP archive (with extension): ")
-output_directory = "Decompressed SigMF files"#input("Enter the directory to extract the contents to: ")
+#archive_name = "Compressed SigMF files.zip" 
+input_usr = input("Enter the path to the ZIP archive (without extension): ")
+archive_name = input_usr + ".zip";
+output_directory = input_usr#"Decompressed SigMF files"#input("Enter the directory to extract the contents to: ")
 if os.path.exists(output_directory) and os.path.isdir(output_directory):
-    print(f"Error: The directory '{output_directory}' already exists. Please first delete or rename the current archive before generating a new one.\n")
-    sys.exit(1)  # Exit the program with a non-zero status
+    shutil.rmtree(output_directory)  # Deletes directory and all contents
+    print("Previous Decompressed SigMF files directory is now deleted")
+    #print(f"Error: The directory '{output_directory}' already exists. Please first delete or rename the current archive before generating a new one.\n")
+    #sys.exit(1)  # Exit the program with a non-zero status
 
 # Ensure output directory exists
 os.makedirs(output_directory, exist_ok=True)
