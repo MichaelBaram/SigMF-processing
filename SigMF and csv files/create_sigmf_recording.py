@@ -83,7 +83,7 @@ def process_file_with_SigMF(csv_filename_with_extension,gps_lat,gps_lon,gps_alt)
             SigMFFile.DATATYPE_KEY: get_data_type_str(complex_array),  # in this case, 'cf32_le'
             SigMFFile.SAMPLE_RATE_KEY: 100000000,
             SigMFFile.AUTHOR_KEY: 'mbaram@nd.edu',
-            SigMFFile.DESCRIPTION_KEY: 'Synchronous complex baseband waveforms for SASL algorithm - pilot experiment conducted from March 14 to March 15',
+            SigMFFile.DESCRIPTION_KEY: 'Synchronous complex baseband waveforms for SASL algorithm',
             SigMFFile.FREQUENCY_KEY: 5787500000,  # Center frequency in Hz
             SigMFFile.DATETIME_KEY: str(datetime.now(pytz.timezone('US/Eastern')))
         }
